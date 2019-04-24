@@ -1,15 +1,10 @@
 # rbvj
 
-## 2019-Apr-22 @tailorvj
+I'm fixing bugs and working on new features for RBVJ to be included in FullPageOS as a demo app. 
 
-I'm starting to integrate rbvj as a FullPageOS app. 
+All updates can be found in the [Development Blog](BLOG.md)
 
-Current Features:
-
-* Opens up on patch /0/0/20 by default
-* Deploys to Heroku
-
-Demo URL
+## Demo URL
 
 https://sheltered-island-26844.herokuapp.com
 
