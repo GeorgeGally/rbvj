@@ -18,7 +18,8 @@ function Microphone (_fft) {
 
     function init () {
       try {
-        startMic(new AudioContext());
+        // startMic(new AudioContext());
+        startMic(audioContext);
       }
       catch (e) {
         console.error(e);
@@ -26,6 +27,14 @@ function Microphone (_fft) {
       }
     }
 
+    //Security policy in Chrome requires user interaction
+    //for AudioContext to be active.
+    //https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio
+    document.addEventListener("click", function(){
+      audioContext.resume().then(() => {
+        console.log('Playback resumed successfully');
+      });
+    });
 
     function startMic (context) {
 
